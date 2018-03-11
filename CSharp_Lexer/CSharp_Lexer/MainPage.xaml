@@ -3,9 +3,19 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CSharp_Lexer"
              x:Class="CSharp_Lexer.MainPage">
-
-	<Label Text="Welcome to Xamarin.Forms!" 
-           VerticalOptions="Center" 
-           HorizontalOptions="Center" />
+    <Grid Padding="10" BackgroundColor="#424242">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50" />
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Button x:Name="btn_OpenFile" Grid.Row="0" Text="Open File" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="#26c6da" />
+        <Label x:Name="txt_Status" Grid.Row="1" Text="No Input File!" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" TextColor="White"/>
+        <Button x:Name="btn_Analyze" Grid.Row="2" Text="Analyze" VerticalOptions="FillAndExpand"  HorizontalOptions="FillAndExpand" BackgroundColor="White" TextColor="#26c6da" />
+        <ScrollView Grid.Row="3" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White">
+            <Label x:Name="txt_LexedData" />
+        </ScrollView>
+    </Grid>
 
 </ContentPage>
